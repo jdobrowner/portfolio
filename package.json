@@ -1,9 +1,9 @@
 {
   "name": "automaton",
   "version": "1.0.0",
-  "description": "Cellular automaton on a Escher tile grid",
+  "description": "React-Redux starter",
   "main": "index.js",
-  "repository": "git@github.com:jdobrowner/automaton.git",
+  "repository": "git@github.com:jdobrowner/myreactstarter.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js & npm run watch:css",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
@@ -11,7 +11,7 @@
     "build:css": "rm -f style/style.css && lessc style/style.less style/style.css",
     "watch:css": "chokidar-cmd -c 'npm run build:css' -t style/**/*.less"
   },
-  "author": "Jason Dobrowner and Monika Zarako-Dobrowner",
+  "author": "Jason Dobrowner",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.21.0",

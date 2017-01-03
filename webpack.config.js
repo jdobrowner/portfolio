@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: __dirname,
     publicPath: '/',
-    filename: 'automaton.js'
+    filename: 'bundle.js'
   },
   module: {
     loaders: [{
