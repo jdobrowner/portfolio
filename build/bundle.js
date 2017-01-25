@@ -21514,11 +21514,11 @@
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _intro = __webpack_require__(183);
+	var _intro = __webpack_require__(181);
 
 	var _intro2 = _interopRequireDefault(_intro);
 
-	var _projects = __webpack_require__(184);
+	var _projects = __webpack_require__(182);
 
 	var _projects2 = _interopRequireDefault(_projects);
 
@@ -21545,7 +21545,7 @@
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21556,10 +21556,6 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _greyBars = __webpack_require__(181);
-
-	var _greyBars2 = _interopRequireDefault(_greyBars);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21579,35 +21575,34 @@
 	  }
 
 	  _createClass(Header, [{
-	    key: 'componentDidMount',
+	    key: "componentDidMount",
 	    value: function componentDidMount() {}
 	  }, {
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'header',
+	        "header",
 	        null,
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'title-box' },
-	          _react2.default.createElement(_greyBars2.default, null),
+	          "div",
+	          { className: "title-box" },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'jason' },
+	            "div",
+	            { className: "jason" },
 	            _react2.default.createElement(
-	              'h1',
+	              "h1",
 	              null,
-	              'Jason Dobrowner'
+	              "Jason Dobrowner"
 	            )
 	          )
 	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'web-dev' },
+	          "div",
+	          { className: "web-dev" },
 	          _react2.default.createElement(
-	            'h2',
+	            "h2",
 	            null,
-	            'Projects | About'
+	            "Projects | About"
 	          )
 	        )
 	      );
@@ -21621,197 +21616,6 @@
 
 /***/ },
 /* 181 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _colors = __webpack_require__(182);
-
-	var _colors2 = _interopRequireDefault(_colors);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var GreyBars = function (_Component) {
-	  _inherits(GreyBars, _Component);
-
-	  function GreyBars() {
-	    _classCallCheck(this, GreyBars);
-
-	    var _this = _possibleConstructorReturn(this, (GreyBars.__proto__ || Object.getPrototypeOf(GreyBars)).call(this));
-
-	    _this.showBars = _this.showBars.bind(_this);
-	    _this.widenBars = _this.widenBars.bind(_this);
-
-	    _this.state = {
-	      barWidths: noWidth(14),
-	      barColors: getColors(14),
-	      barTransitions: getTransitions(14)
-	    };
-	    return _this;
-	  }
-
-	  _createClass(GreyBars, [{
-	    key: 'widenBars',
-	    value: function widenBars(time) {
-	      var _this2 = this;
-
-	      var widths = [].concat(_toConsumableArray(this.state.barWidths));
-	      var widthTest = { width: "200px" };
-	      var greyBars = widths.map(function (w, i) {
-	        var newWidth = Math.floor(gaussian(500, 30));
-	        setTimeout(function () {
-	          _this2.setState({ barWidths: updateArray(_this2.state.barWidths, i, newWidth) });
-	        }, time + gaussian(1000, 300));
-	      });
-	      return greyBars;
-	    }
-	  }, {
-	    key: 'showBars',
-	    value: function showBars() {
-	      var widths = this.state.barWidths;
-	      var barColors = this.state.barColors;
-	      var transitions = this.state.barTransitions;
-	      var greyBars = widths.map(function (width, i) {
-	        var style = {
-	          width: width + 'px',
-	          backgroundColor: barColors[i],
-	          transition: transitions[i] + 's'
-	        };
-	        return _react2.default.createElement('div', { className: 'bar', style: style, key: 'bar' + i });
-	      });
-	      return greyBars;
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      // this.widenBars(300);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'grey-bars', onClick: function onClick() {
-	            return _this3.widenBars(0);
-	          } },
-	        this.showBars()
-	      );
-	    }
-	  }]);
-
-	  return GreyBars;
-	}(_react.Component);
-
-	exports.default = GreyBars;
-
-
-	function updateArray(stateArr, index, element) {
-	  var arr = [].concat(_toConsumableArray(stateArr));
-	  var arrStart = arr.slice(0, index);
-	  var arrEnd = arr.slice(index + 1, arr.length);
-	  return [].concat(_toConsumableArray(arrStart), [element], _toConsumableArray(arrEnd));
-	}
-
-	function gaussian(mean, stdev) {
-	  var x1, x2, w;
-	  do {
-	    x1 = 2.0 * Math.random() - 1.0;
-	    x2 = 2.0 * Math.random() - 1.0;
-	    w = x1 * x1 + x2 * x2;
-	  } while (w >= 1.0);
-	  w = Math.sqrt(-2.0 * Math.log(w) / w);
-	  var y = x1 * w;
-	  var val = mean + stdev * y;
-	  if (val < 0) return val + 2 * stdev * y;
-	  return mean + stdev * y;
-	}
-
-	function getColors(n) {
-	  var barColors = [];
-	  for (var i = 0; i < n; i++) {
-	    var rand = Math.random() * 6;
-	    if (rand < 1) barColors.push(_colors2.default.grey6);else if (rand < 2) barColors.push(_colors2.default.grey7);else if (rand < 3) barColors.push(_colors2.default.grey8);else if (rand < 4) barColors.push(_colors2.default.grey9);else if (rand < 5) barColors.push(_colors2.default.grey10);else barColors.push(_colors2.default.grey11);
-	  }
-	  return barColors;
-	}
-
-	function getTransitions(n) {
-	  var transitions = [];
-	  for (var i = 0; i < n; i++) {
-	    var time = gaussian(0.5, 0.1);
-	    transitions.push(time);
-	  }
-	  return transitions;
-	}
-
-	function noWidth(n) {
-	  var widths = [];
-	  for (var i = 0; i < n; i++) {
-	    widths.push(0);
-	  }return widths;
-	}
-
-/***/ },
-/* 182 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var white = '#f7f7f7';
-	var grey1 = '#dfdfdf';
-	var grey2 = '#c9c9c9';
-	var grey3 = '#b1b1b1';
-	var grey4 = '#999894';
-	var grey5 = '#83837f';
-	var grey6 = '#6f6e6b';
-	var grey7 = '#5d5c59';
-	var grey8 = '#4d4c49';
-	var grey9 = '#403f3d';
-	var grey10 = '#383734';
-	var grey11 = '#302f2c';
-
-	var colors = {
-	  white: white,
-	  grey1: grey1,
-	  grey2: grey2,
-	  grey3: grey3,
-	  grey4: grey4,
-	  grey5: grey5,
-	  grey6: grey6,
-	  grey7: grey7,
-	  grey8: grey8,
-	  grey9: grey9,
-	  grey10: grey10,
-	  grey11: grey11
-	};
-
-	exports.default = colors;
-
-/***/ },
-/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21833,7 +21637,7 @@
 	    _react2.default.createElement(
 	      "p",
 	      null,
-	      "Hello! I am a web developer."
+	      "Hello! I am a web developer. This is my in-progress portfolio. There will probably be some a short summary about me here."
 	    )
 	  );
 	}
@@ -21841,7 +21645,7 @@
 	exports.default = intro;
 
 /***/ },
-/* 184 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21856,15 +21660,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _project = __webpack_require__(185);
+	var _project = __webpack_require__(183);
 
 	var _project2 = _interopRequireDefault(_project);
 
-	var _colors = __webpack_require__(182);
+	var _colors = __webpack_require__(184);
 
 	var _colors2 = _interopRequireDefault(_colors);
 
-	var _urls = __webpack_require__(186);
+	var _urls = __webpack_require__(185);
+
+	var _mm = __webpack_require__(186);
+
+	var _mm2 = _interopRequireDefault(_mm);
 
 	var _ca = __webpack_require__(187);
 
@@ -21918,6 +21726,7 @@
 	            'Projects'
 	          )
 	        ),
+	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', bkgColor: _colors2.default.white, text: testText(), image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm }),
 	        _react2.default.createElement(_project2.default, { title: 'Cellular Automata', bkgColor: _colors2.default.white, text: testText(), image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca }),
 	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', bkgColor: _colors2.default.white, text: testText(), image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs }),
 	        _react2.default.createElement(_project2.default, { title: 'Learn:Ukelele', bkgColor: _colors2.default.white, text: testText(), image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu }),
@@ -21938,7 +21747,7 @@
 	}
 
 /***/ },
-/* 185 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21985,7 +21794,7 @@
 	            { href: this.props.url, target: '_blank' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'button' },
+	              { className: 'button goThere' },
 	              'Go There'
 	            )
 	          ),
@@ -21994,7 +21803,7 @@
 	            { href: this.props.repo, target: '_blank' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'button' },
+	              { className: 'button repo' },
 	              'Repo'
 	            )
 	          )
@@ -22008,7 +21817,7 @@
 	            { href: this.props.url, target: '_blank' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'button' },
+	              { className: 'button-itunes goThere' },
 	              'See on iTunes Preview'
 	            )
 	          )
@@ -22018,11 +21827,9 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var bkgColor = { backgroundColor: this.props.bkgColor };
-	      //const image = `/${this.props.image}.png`;
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'project', style: bkgColor },
+	        { className: 'project' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'box' },
@@ -22061,12 +21868,52 @@
 	exports.default = Projects;
 
 /***/ },
-/* 186 */
+/* 184 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var white = '#f7f7f7';
+	var grey1 = '#dfdfdf';
+	var grey2 = '#c9c9c9';
+	var grey3 = '#b1b1b1';
+	var grey4 = '#999894';
+	var grey5 = '#83837f';
+	var grey6 = '#6f6e6b';
+	var grey7 = '#5d5c59';
+	var grey8 = '#4d4c49';
+	var grey9 = '#403f3d';
+	var grey10 = '#383734';
+	var grey11 = '#302f2c';
+
+	var colors = {
+	  white: white,
+	  grey1: grey1,
+	  grey2: grey2,
+	  grey3: grey3,
+	  grey4: grey4,
+	  grey5: grey5,
+	  grey6: grey6,
+	  grey7: grey7,
+	  grey8: grey8,
+	  grey9: grey9,
+	  grey10: grey10,
+	  grey11: grey11
+	};
+
+	exports.default = colors;
+
+/***/ },
+/* 185 */
 /***/ function(module, exports) {
 
 	'use strict';
 
 	var urls = {
+	  mm: 'https://vast-reef-93477.herokuapp.com/',
 	  ca: 'https://jdobrowner.github.io/automaton/',
 	  gs: 'https://jdobrowner.github.io/web-synth/',
 	  lu: 'https://jdobrowner.github.io/learn-ukulele/',
@@ -22075,6 +21922,7 @@
 	};
 
 	var repos = {
+	  mm: 'https://github.com/mzarako/mindful-moments',
 	  ca: 'https://github.com/jdobrowner/automaton',
 	  gs: 'https://github.com/jdobrowner/web-synth',
 	  lu: 'https://github.com/jdobrowner/learn-ukulele',
@@ -22082,6 +21930,14 @@
 	};
 
 	module.exports = { urls: urls, repos: repos };
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	module.exports = __webpack_require__.p + "daf21ea76ad34ccbb6fe17a14834630d.png";
 
 /***/ },
 /* 187 */
