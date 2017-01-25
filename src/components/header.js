@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import GreyBars from './grey-bars';
 
 class Header extends Component {
   constructor() {
@@ -12,7 +11,6 @@ class Header extends Component {
     return (
       <header>
         <div className="title-box">
-          <GreyBars />
           <div className="jason"><h1>Jason Dobrowner</h1></div>
         </div>
         <div className="web-dev">

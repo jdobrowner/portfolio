@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Project from './project';
 import colors from '../colors';
 import { urls, repos } from '../content/urls';
+import mmImg from '../../images/mm.png';
 import caImg from '../../images/ca.png';
 import gsImg from '../../images/gs.png';
 import luImg from '../../images/lu.png';
@@ -18,6 +19,7 @@ export default class Projects extends Component {
         <div className="sub-header">
           <h3>Projects</h3>
         </div>
+        <Project title="Mindful Moments" bkgColor={colors.white} text={testText()} image={mmImg} url={urls.mm} repo={repos.mm} />
         <Project title="Cellular Automata" bkgColor={colors.white} text={testText()} image={caImg} url={urls.ca} repo={repos.ca} />
         <Project title="Galaxy Synth" bkgColor={colors.white} text={testText()} image={gsImg} url={urls.gs} repo={repos.gs} />
         <Project title="Learn:Ukelele" bkgColor={colors.white} text={testText()} image={luImg} url={urls.lu} repo={repos.lu} />
