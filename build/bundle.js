@@ -21532,20 +21532,41 @@
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'app' },
-	    _react2.default.createElement(_header2.default, null),
-	    _react2.default.createElement(_intro2.default, null),
-	    _react2.default.createElement(_projects2.default, null),
-	    _react2.default.createElement(_aboutMe2.default, null)
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'content-container' },
+	      _react2.default.createElement(_header2.default, null),
+	      _react2.default.createElement(_intro2.default, null),
+	      _react2.default.createElement(_projects2.default, null),
+	      _react2.default.createElement(_aboutMe2.default, null)
+	    )
 	  );
 	}
 
 	exports.default = App;
 
+
+	var cuteAnimals = ['cat', 'dog', 'hamster'];
+
+	var linkedList = {};
+
+	for (var i = cuteAnimals.length - 1; i >= 0; i--) {
+	  var node;
+	  // if the tail
+	  if (i === cuteAnimals.length - 1) {
+	    node = { value: cuteAnimals[i], pointer: null };
+	  } else {
+	    var previousNode = { value: cuteAnimals[i], pointer: linkedList[cuteAnimals[i + 1]].pointer };
+	    node = { value: cuteAnimals[i], pointer: previousNode };
+	  }
+	  linkedList[node.value.toString()] = node;
+	}
+
 /***/ },
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21575,35 +21596,18 @@
 	  }
 
 	  _createClass(Header, [{
-	    key: "componentDidMount",
+	    key: 'componentDidMount',
 	    value: function componentDidMount() {}
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "header",
+	        'header',
 	        null,
 	        _react2.default.createElement(
-	          "div",
-	          { className: "title-box" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "jason" },
-	            _react2.default.createElement(
-	              "h1",
-	              null,
-	              "Jason Dobrowner"
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "web-dev" },
-	          _react2.default.createElement(
-	            "h2",
-	            null,
-	            "Projects | About"
-	          )
+	          'h1',
+	          null,
+	          'Jason Dobrowner'
 	        )
 	      );
 	    }
@@ -21726,8 +21730,8 @@
 	            'Projects'
 	          )
 	        ),
-	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', bkgColor: _colors2.default.white, text: testText(), image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm }),
 	        _react2.default.createElement(_project2.default, { title: 'Cellular Automata', bkgColor: _colors2.default.white, text: testText(), image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca }),
+	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', bkgColor: _colors2.default.white, text: testText(), image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm }),
 	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', bkgColor: _colors2.default.white, text: testText(), image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs }),
 	        _react2.default.createElement(_project2.default, { title: 'Learn:Ukelele', bkgColor: _colors2.default.white, text: testText(), image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu }),
 	        _react2.default.createElement(_project2.default, { title: 'Logic Quiz', bkgColor: _colors2.default.white, text: testText(), image: _lq2.default, url: _urls.urls.lq, repo: _urls.repos.lq }),

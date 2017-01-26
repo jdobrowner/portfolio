@@ -19,8 +19,8 @@ export default class Projects extends Component {
         <div className="sub-header">
           <h3>Projects</h3>
         </div>
-        <Project title="Mindful Moments" bkgColor={colors.white} text={testText()} image={mmImg} url={urls.mm} repo={repos.mm} />
         <Project title="Cellular Automata" bkgColor={colors.white} text={testText()} image={caImg} url={urls.ca} repo={repos.ca} />
+        <Project title="Mindful Moments" bkgColor={colors.white} text={testText()} image={mmImg} url={urls.mm} repo={repos.mm} />
         <Project title="Galaxy Synth" bkgColor={colors.white} text={testText()} image={gsImg} url={urls.gs} repo={repos.gs} />
         <Project title="Learn:Ukelele" bkgColor={colors.white} text={testText()} image={luImg} url={urls.lu} repo={repos.lu} />
         <Project title="Logic Quiz" bkgColor={colors.white} text={testText()} image={lqImg} url={urls.lq} repo={repos.lq} />

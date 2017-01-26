@@ -7,12 +7,34 @@ import About from './about-me'
 function App() {
   return (
     <div className="app">
-      <Header />
-      <Intro />
-      <Projects />
-      <About />
+      <div className="content-container">
+        <Header />
+        <Intro />
+        <Projects />
+        <About />
+      </div>
     </div>
   )
 }
 
 export default App;
+
+
+
+
+var cuteAnimals = ['cat', 'dog', 'hamster'];
+
+var linkedList = {};
+
+for (var i = cuteAnimals.length-1; i >= 0; i--) {
+  var node;
+  // if the tail
+  if (i === cuteAnimals.length-1) {
+    node = { value: cuteAnimals[i], pointer: null };
+  }
+  else {
+    var previousNode = { value: cuteAnimals[i], pointer: linkedList[cuteAnimals[i+1]].pointer };
+    node = { value: cuteAnimals[i], pointer: previousNode };
+  }
+  linkedList[node.value.toString()] = node;
+}

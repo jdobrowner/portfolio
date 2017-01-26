@@ -20,12 +20,15 @@ html {
 body {
   font-family: 'Quicksand', sans-serif;
   color: @grey9;
+  p {
+    line-height: 1.5;
+  }
 }
 
-.box {
-  // border: 2px dashed @grey1;
-  padding: 10px;
-  flex: 1;
+.content-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bar {
@@ -35,48 +38,32 @@ body {
 }
 
 header {
-  position: fixed;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: @white;
-  border-bottom: 2px solid @grey6;
-  padding: 10px 30px;
-}
-
-.title-box {
-  position: relative;
-}
-
-.jason {
-  width: 100%;
-  min-width: 280px;
+  padding: 140px 30px 120px 30px;
   h1 {
-    font-size: 1.6em;
-    letter-spacing: 4px;
+    font-size: 2.2em;
+    letter-spacing: 6px;
     color: @grey7;
-    line-height: 40px;
     text-align: center;
   }
-}
-
-.web-dev {
-  font-size: 1.2em;
-  line-height: 40px;
-  text-align: center;
-  color: @grey5;
 }
 
 .intro {
   font-size: 1.1em;
   text-align: center;
+  padding-bottom: 30px;
+  padding: 0 30px 30px 30px;
   color: @grey8;
-  padding: 120px 30px 30px 30px;
+}
+
+.about {
+  padding: 0 30px 60px 30px;
 }
 
 .sub-header {
   text-align: center;
-  padding: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   font-size: 1.6em;
   color: @grey5;
 }
@@ -93,39 +80,56 @@ header {
 .centered {
   display: flex;
   justify-content: center;
+  align-items: center;
   div {
     width: 80%;
-
   }
 }
 img {
   // margin: auto;
   width: 100%;
+  // border: 4px solid @white;
+  //transition: 0.1s;
+}
+img:hover {
+  // border: 1px solid @white;
 }
 
 .button {
   display: inline-block;
   text-align: center;
-  width: 100px;
-  height: 40px;
-  color: @white;
-  line-height: 40px;
+  width: 110px;
+  height: 45px;
+  line-height: 45px;
   margin: 30px 30px 0 0;
+  border-radius: 3px;
 }
+
 .repo {
-  background-color: @grey3;
+  background-color: @white;
+  color: @grey3;
+  border: 2px solid @grey3;
 }
 .goThere {
-  background-color: @grey4;
+  background-color: @white;
+  color: @grey4;
+  border: 2px solid @grey4;
 }
 .button-itunes {
-  text-align: center;
-  width: 200px;
-  height: 40px;
-  color: @white;
-  margin-top: 30px;
-  line-height: 40px;
+  .button;
+  .goThere;
+  width: 220px;
+  height: 45px;
 }
+.repo:hover {
+  background-color: @grey3;
+  color: @white;
+}
+.goThere:hover, .border-itunes:hover {
+  background-color: @grey4;
+  color: @white;
+}
+
 
 .project {
   h3 {
