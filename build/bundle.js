@@ -362,8 +362,15 @@
 /* 5 */
 /***/ function(module, exports) {
 
+	/*
+	object-assign
+	(c) Sindre Sorhus
+	@license MIT
+	*/
+
 	'use strict';
 	/* eslint-disable no-unused-vars */
+	var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 	var hasOwnProperty = Object.prototype.hasOwnProperty;
 	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
@@ -384,7 +391,7 @@
 			// Detect buggy property enumeration order in older V8 versions.
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line
+			var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
 			test1[5] = 'de';
 			if (Object.getOwnPropertyNames(test1)[0] === '5') {
 				return false;
@@ -413,7 +420,7 @@
 			}
 
 			return true;
-		} catch (e) {
+		} catch (err) {
 			// We don't expect any of the above to throw, but better to be safe.
 			return false;
 		}
@@ -433,8 +440,8 @@
 				}
 			}
 
-			if (Object.getOwnPropertySymbols) {
-				symbols = Object.getOwnPropertySymbols(from);
+			if (getOwnPropertySymbols) {
+				symbols = getOwnPropertySymbols(from);
 				for (var i = 0; i < symbols.length; i++) {
 					if (propIsEnumerable.call(from, symbols[i])) {
 						to[symbols[i]] = from[symbols[i]];
@@ -21522,9 +21529,13 @@
 
 	var _projects2 = _interopRequireDefault(_projects);
 
-	var _aboutMe = __webpack_require__(192);
+	var _aboutMe = __webpack_require__(193);
 
 	var _aboutMe2 = _interopRequireDefault(_aboutMe);
+
+	var _contact = __webpack_require__(195);
+
+	var _contact2 = _interopRequireDefault(_contact);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21538,7 +21549,8 @@
 	      _react2.default.createElement(_header2.default, null),
 	      _react2.default.createElement(_intro2.default, null),
 	      _react2.default.createElement(_projects2.default, null),
-	      _react2.default.createElement(_aboutMe2.default, null)
+	      _react2.default.createElement(_aboutMe2.default, null),
+	      _react2.default.createElement(_contact2.default, null)
 	    )
 	  );
 	}
@@ -21641,7 +21653,13 @@
 	    _react2.default.createElement(
 	      "p",
 	      null,
-	      "Hello! I am a web developer. This is my in-progress portfolio. There will probably be some a short summary about me here."
+	      "Hello, I'm a web developer based in Los Angeles.  Learn more about me below, or ",
+	      _react2.default.createElement(
+	        "a",
+	        { className: "email-me", href: "mailto:jdobrowner@gmail.com" },
+	        "email me"
+	      ),
+	      " if you would like to talk."
 	    )
 	  );
 	}
@@ -21698,6 +21716,12 @@
 
 	var _ab2 = _interopRequireDefault(_ab);
 
+	var _projects = __webpack_require__(192);
+
+	var projects = _interopRequireWildcard(_projects);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21730,12 +21754,12 @@
 	            'Projects'
 	          )
 	        ),
-	        _react2.default.createElement(_project2.default, { title: 'Cellular Automata', bkgColor: _colors2.default.white, text: testText(), image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca }),
-	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', bkgColor: _colors2.default.white, text: testText(), image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm }),
-	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', bkgColor: _colors2.default.white, text: testText(), image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs }),
-	        _react2.default.createElement(_project2.default, { title: 'Learn:Ukelele', bkgColor: _colors2.default.white, text: testText(), image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu }),
-	        _react2.default.createElement(_project2.default, { title: 'Logic Quiz', bkgColor: _colors2.default.white, text: testText(), image: _lq2.default, url: _urls.urls.lq, repo: _urls.repos.lq }),
-	        _react2.default.createElement(_project2.default, { title: 'Alpha Bees', bkgColor: _colors2.default.white, text: testText(), image: _ab2.default, url: _urls.urls.ab })
+	        _react2.default.createElement(_project2.default, { title: 'Cellular Automata', text: projects.cellularAutomaton, image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca }),
+	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', text: projects.mindfulMoments, image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm }),
+	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', text: projects.galaxySynth, image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs }),
+	        _react2.default.createElement(_project2.default, { title: 'Learn:Ukelele', text: projects.learnUkulele, image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu }),
+	        _react2.default.createElement(_project2.default, { title: 'Logic Quiz', text: projects.logicQuiz, image: _lq2.default, url: _urls.urls.lq, repo: _urls.repos.lq }),
+	        _react2.default.createElement(_project2.default, { title: 'Alpha Bees', text: projects.alphaBees, image: _ab2.default, url: _urls.urls.ab })
 	      );
 	    }
 	  }]);
@@ -21845,7 +21869,18 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            this.props.text
+	            this.props.text.description
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Tools | ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'tools' },
+	              this.props.text.tools
+	            )
 	          ),
 	          this.buttons()
 	        ),
@@ -21985,6 +22020,205 @@
 
 /***/ },
 /* 192 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var cellularAutomaton = {
+	  description: 'An app for generating cellular automata on a triangular grid with user controls.',
+	  tools: 'React, Redux, SVG, ES6, Webpack'
+	};
+
+	var mindfulMoments = {
+	  description: 'An app for creating and storing notes of gratitude.',
+	  tools: 'React, Redux, NodeJS, Express, Passport, Bcrypt, JWT, ES6, Webpack'
+	};
+
+	var galaxySynth = {
+	  description: 'A web-based polyphonic synthesizer with custom sound controls and midi keyboard plug-in capability.',
+	  tools: 'ToneJS, WebMidi, Less, jQuery, ES6, Webpack'
+	};
+
+	var learnUkulele = {
+	  description: 'A resource for ukulele players to listen to and learn new chords.',
+	  tools: 'ToneJS, jQuery, Canvas'
+	};
+
+	var logicQuiz = {
+	  description: 'A simple quiz about the not so simple topic of Boolean Algebra.',
+	  tools: 'jQuery, CSS, HTML'
+	};
+
+	var alphaBees = {
+	  description: 'A fast-paced, bee themed word game for both kids and adults.',
+	  tools: 'Objective-C, SpriteKit'
+	};
+
+	module.exports = {
+	  cellularAutomaton: cellularAutomaton,
+	  mindfulMoments: mindfulMoments,
+	  galaxySynth: galaxySynth,
+	  learnUkulele: learnUkulele,
+	  logicQuiz: logicQuiz,
+	  alphaBees: alphaBees
+	};
+
+/***/ },
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _about = __webpack_require__(194);
+
+	var _about2 = _interopRequireDefault(_about);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Projects = function (_Component) {
+	  _inherits(Projects, _Component);
+
+	  function Projects() {
+	    _classCallCheck(this, Projects);
+
+	    return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
+	  }
+
+	  _createClass(Projects, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'about' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'sub-header' },
+	          _react2.default.createElement(
+	            'h3',
+	            null,
+	            'About Me'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'project' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'box' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              _about2.default.intro
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'box' },
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'likes-title' },
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Some Things I Like'
+	              ),
+	              _react2.default.createElement('br', null)
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'project' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'box likes' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Sci-Fi Literature'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'History'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Board Games'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'box likes' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Sequoia Trees'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Southern Utah'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Lakers'
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Projects;
+	}(_react.Component);
+
+	exports.default = Projects;
+
+/***/ },
+/* 194 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var introParagraph = 'Hello, I am a web developer based in Los Angeles. I enjoy all aspects of development, from concept, design, frontend, and backend. With a background in music, physics, and architecture, I enjoy bringing together varied perscpecives and skills to build both interesting and useful products. Learn more about me below, and email me if you would like to talk.';
+
+	var aboutMe = {
+	  intro: 'I am a man of many passions, among which are music, physics, mathematics and architecture. But really I am just a guy who likes to have fun, go on adventures, relax, laugh, spend time with the people and animals I love, and eat good food.',
+	  likes: 'Sci-Fi Literature, Ancient History, Board Games, Sequoia Trees, Southern Utah, Traveling, and the Lakers',
+	  musicIntro: 'I happen to be a trained orchestral composer and have a very close relationship with the guitar. Some of my music on is featured on SpongeBob SquarePants.',
+	  musicLikes: 'Gustav Holtz - The Planets, Gustav Mahler - 2nd Symphony, Claude Debussy - La Mer',
+	  physicsIntro: 'I am quite fascinated by physics. Thinking about and learning physics is one of my favorite hobbies which lead to my recent goal and accomplishment of earning a degree in physics',
+	  physicsLikes: 'String Theory, Quantum Entanglement, Special Relativity',
+	  designIntro: 'Good design is a beautiful thing. I am especially fond of geometric design that is somehow also organic. Aside from web design, I have been fortunate enough to have the opportuntiy to design a couple homes.',
+	  designLikes: 'M.C. Escher, Antonio Gaudi, Charles Eames'
+	};
+
+	exports.default = aboutMe;
+
+/***/ },
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22021,20 +22255,20 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        { className: "about" },
-	        _react2.default.createElement(
-	          "div",
-	          { className: "sub-header" },
-	          _react2.default.createElement(
-	            "h3",
-	            null,
-	            "About"
-	          )
-	        ),
+	        { className: "contact" },
 	        _react2.default.createElement(
 	          "p",
 	          null,
-	          testText()
+	          _react2.default.createElement(
+	            "span",
+	            null,
+	            "email: "
+	          ),
+	          _react2.default.createElement(
+	            "a",
+	            { className: "email-me", href: "mailto:jdobrowner@gmail.com" },
+	            "jdobrowner@gmail.com"
+	          )
 	        )
 	      );
 	    }
@@ -22044,11 +22278,6 @@
 	}(_react.Component);
 
 	exports.default = Projects;
-
-
-	function testText() {
-	  return "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-	}
 
 /***/ }
 /******/ ]);

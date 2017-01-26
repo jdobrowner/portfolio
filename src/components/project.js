@@ -27,7 +27,9 @@ export default class Projects extends Component {
       <div className="project">
         <div className="box">
           <h3>{this.props.title}</h3>
-          <p>{this.props.text}</p>
+          <p>{this.props.text.description}</p>
+          <br/>
+          <p>Tools | <span className='tools'>{this.props.text.tools}</span></p>
           {this.buttons()}
         </div>
         <div className="box centered">

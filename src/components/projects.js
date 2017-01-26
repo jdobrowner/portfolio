@@ -8,6 +8,7 @@ import gsImg from '../../images/gs.png';
 import luImg from '../../images/lu.png';
 import lqImg from '../../images/lq.png';
 import abImg from '../../images/ab.png';
+import * as projects from '../content/projects';
 
 export default class Projects extends Component {
   constructor() {
@@ -19,12 +20,12 @@ export default class Projects extends Component {
         <div className="sub-header">
           <h3>Projects</h3>
         </div>
-        <Project title="Cellular Automata" bkgColor={colors.white} text={testText()} image={caImg} url={urls.ca} repo={repos.ca} />
-        <Project title="Mindful Moments" bkgColor={colors.white} text={testText()} image={mmImg} url={urls.mm} repo={repos.mm} />
-        <Project title="Galaxy Synth" bkgColor={colors.white} text={testText()} image={gsImg} url={urls.gs} repo={repos.gs} />
-        <Project title="Learn:Ukelele" bkgColor={colors.white} text={testText()} image={luImg} url={urls.lu} repo={repos.lu} />
-        <Project title="Logic Quiz" bkgColor={colors.white} text={testText()} image={lqImg} url={urls.lq} repo={repos.lq} />
-        <Project title="Alpha Bees" bkgColor={colors.white} text={testText()} image={abImg} url={urls.ab} />
+        <Project title="Cellular Automata" text={projects.cellularAutomaton} image={caImg} url={urls.ca} repo={repos.ca} />
+        <Project title="Mindful Moments" text={projects.mindfulMoments} image={mmImg} url={urls.mm} repo={repos.mm} />
+        <Project title="Galaxy Synth" text={projects.galaxySynth} image={gsImg} url={urls.gs} repo={repos.gs} />
+        <Project title="Learn:Ukelele" text={projects.learnUkulele} image={luImg} url={urls.lu} repo={repos.lu} />
+        <Project title="Logic Quiz" text={projects.logicQuiz} image={lqImg} url={urls.lq} repo={repos.lq} />
+        <Project title="Alpha Bees" text={projects.alphaBees} image={abImg} url={urls.ab} />
       </div>
     )
   }
