@@ -362,15 +362,8 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	/*
-	object-assign
-	(c) Sindre Sorhus
-	@license MIT
-	*/
-
 	'use strict';
 	/* eslint-disable no-unused-vars */
-	var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 	var hasOwnProperty = Object.prototype.hasOwnProperty;
 	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
@@ -391,7 +384,7 @@
 			// Detect buggy property enumeration order in older V8 versions.
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+			var test1 = new String('abc');  // eslint-disable-line
 			test1[5] = 'de';
 			if (Object.getOwnPropertyNames(test1)[0] === '5') {
 				return false;
@@ -420,7 +413,7 @@
 			}
 
 			return true;
-		} catch (err) {
+		} catch (e) {
 			// We don't expect any of the above to throw, but better to be safe.
 			return false;
 		}
@@ -440,8 +433,8 @@
 				}
 			}
 
-			if (getOwnPropertySymbols) {
-				symbols = getOwnPropertySymbols(from);
+			if (Object.getOwnPropertySymbols) {
+				symbols = Object.getOwnPropertySymbols(from);
 				for (var i = 0; i < symbols.length; i++) {
 					if (propIsEnumerable.call(from, symbols[i])) {
 						to[symbols[i]] = from[symbols[i]];
@@ -21823,7 +21816,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'button goThere' },
-	              'Go There'
+	              'Check It Out'
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -21832,7 +21825,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'button repo' },
-	              'Repo'
+	              'See The Code'
 	            )
 	          )
 	        );
@@ -21976,7 +21969,7 @@
 
 	"use strict";
 
-	module.exports = __webpack_require__.p + "daf21ea76ad34ccbb6fe17a14834630d.png";
+	module.exports = __webpack_require__.p + "91c11216d748d4d33c05082ab8b62f16.png";
 
 /***/ },
 /* 187 */
@@ -22016,7 +22009,7 @@
 
 	"use strict";
 
-	module.exports = __webpack_require__.p + "fbc0340c1589b10aa130cef1a56fffa2.png";
+	module.exports = __webpack_require__.p + "e6abec17f398b3f7d3c3067ecefa3c1c.png";
 
 /***/ },
 /* 192 */

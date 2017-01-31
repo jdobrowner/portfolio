@@ -9,8 +9,8 @@ export default class Projects extends Component {
     if (this.props.title !== 'Alpha Bees') {
       return (
         <div className="buttons">
-          <a href={this.props.url} target="_blank"><div className="button goThere">Go There</div></a>
-          <a href={this.props.repo} target="_blank"><div className="button repo">Repo</div></a>
+          <a href={this.props.url} target="_blank"><div className="button goThere">Check It Out</div></a>
+          <a href={this.props.repo} target="_blank"><div className="button repo">See The Code</div></a>
         </div>
       )
     }
