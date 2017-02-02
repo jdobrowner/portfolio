@@ -24,7 +24,7 @@ const logicQuiz = {
 }
 
 const alphaBees = {
-  description: 'A fast-paced, bee themed word game for both kids and adults.',
+  description: 'A fast-paced, bee themed word game for both kids and adults on the iOS platform.',
   tools: 'Objective-C, SpriteKit'
 }
 

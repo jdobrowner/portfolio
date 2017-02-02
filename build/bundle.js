@@ -21571,7 +21571,7 @@
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21601,18 +21601,27 @@
 	  }
 
 	  _createClass(Header, [{
-	    key: 'componentDidMount',
+	    key: "componentDidMount",
 	    value: function componentDidMount() {}
 	  }, {
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'header',
+	        "header",
 	        null,
 	        _react2.default.createElement(
-	          'h1',
+	          "h1",
 	          null,
-	          'Jason Dobrowner'
+	          _react2.default.createElement(
+	            "span",
+	            { className: "firstName" },
+	            "Jason "
+	          ),
+	          _react2.default.createElement(
+	            "span",
+	            { className: "lastName" },
+	            "Dobrowner"
+	          )
 	        )
 	      );
 	    }
@@ -22043,7 +22052,7 @@
 	};
 
 	var alphaBees = {
-	  description: 'A fast-paced, bee themed word game for both kids and adults.',
+	  description: 'A fast-paced, bee themed word game for both kids and adults on the iOS platform.',
 	  tools: 'Objective-C, SpriteKit'
 	};
 
@@ -22198,7 +22207,7 @@
 	var introParagraph = 'Hello, I am a web developer based in Los Angeles. I enjoy all aspects of development, from concept, design, frontend, and backend. With a background in music, physics, and architecture, I enjoy bringing together varied perscpecives and skills to build both interesting and useful products. Learn more about me below, and email me if you would like to talk.';
 
 	var aboutMe = {
-	  intro: 'I am a man of many passions, among which are music, physics, mathematics and architecture. But really I am just a guy who likes to have fun, go on adventures, relax, laugh, spend time with the people and animals I love, and eat good food.',
+	  intro: 'I am a man of many passions, among which are music, physics, mathematics and architecture. But really I am just a guy who likes to have fun, go on adventures, laugh, spend time with the people and animals I love, and eat good food.',
 	  likes: 'Sci-Fi Literature, Ancient History, Board Games, Sequoia Trees, Southern Utah, Traveling, and the Lakers',
 	  musicIntro: 'I happen to be a trained orchestral composer and have a very close relationship with the guitar. Some of my music on is featured on SpongeBob SquarePants.',
 	  musicLikes: 'Gustav Holtz - The Planets, Gustav Mahler - 2nd Symphony, Claude Debussy - La Mer',
