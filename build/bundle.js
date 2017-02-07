@@ -21615,12 +21615,12 @@
 	          _react2.default.createElement(
 	            "span",
 	            { className: "firstName" },
-	            "Jason "
+	            "JASON "
 	          ),
 	          _react2.default.createElement(
 	            "span",
 	            { className: "lastName" },
-	            "Dobrowner"
+	            "DOBROWNER"
 	          )
 	        )
 	      );
@@ -21655,13 +21655,13 @@
 	    _react2.default.createElement(
 	      "p",
 	      null,
-	      "Hello, I'm a web developer based in Los Angeles.  Learn more about me below, or ",
+	      "Hi, I'm a web developer based in Los Angeles.  Learn more about me below, or ",
 	      _react2.default.createElement(
 	        "a",
 	        { className: "email-me", href: "mailto:jdobrowner@gmail.com" },
 	        "email me"
 	      ),
-	      " if you would like to talk."
+	      " if you'd like to talk."
 	    )
 	  );
 	}
@@ -21747,20 +21747,21 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'projects' },
+	        _react2.default.createElement('div', { className: 'spacer' }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'sub-header' },
 	          _react2.default.createElement(
 	            'h3',
 	            null,
-	            'Projects'
+	            'PROJECTS'
 	          )
 	        ),
-	        _react2.default.createElement(_project2.default, { title: 'Cellular Automata', text: projects.cellularAutomaton, image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca }),
-	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', text: projects.mindfulMoments, image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm }),
-	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', text: projects.galaxySynth, image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs }),
-	        _react2.default.createElement(_project2.default, { title: 'Learn:Ukelele', text: projects.learnUkulele, image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu }),
-	        _react2.default.createElement(_project2.default, { title: 'Alpha Bees', text: projects.alphaBees, image: _ab2.default, url: _urls.urls.ab })
+	        _react2.default.createElement(_project2.default, { title: 'Cellular Automata', text: projects.cellularAutomaton, image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca, classProp: 'odd' }),
+	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', text: projects.mindfulMoments, image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm, classProp: 'even' }),
+	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', text: projects.galaxySynth, image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs, classProp: 'odd' }),
+	        _react2.default.createElement(_project2.default, { title: 'Learn:Ukelele', text: projects.learnUkulele, image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu, classProp: 'even' }),
+	        _react2.default.createElement(_project2.default, { title: 'Alpha Bees', text: projects.alphaBees, image: _ab2.default, url: _urls.urls.ab, classProp: 'odd' })
 	      );
 	    }
 	  }]);
@@ -21858,7 +21859,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'project' },
+	        { className: 'project ' + this.props.classProp },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'box' },
@@ -22107,13 +22108,14 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'about' },
+	        _react2.default.createElement('div', { className: 'spacer' }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'sub-header' },
 	          _react2.default.createElement(
 	            'h3',
 	            null,
-	            'About Me'
+	            'ABOUT ME'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -22261,14 +22263,14 @@
 	          "p",
 	          null,
 	          _react2.default.createElement(
-	            "span",
-	            null,
-	            "email: "
-	          ),
-	          _react2.default.createElement(
 	            "a",
 	            { className: "email-me", href: "mailto:jdobrowner@gmail.com" },
-	            "jdobrowner@gmail.com"
+	            _react2.default.createElement(
+	              "span",
+	              null,
+	              "jdobrowner"
+	            ),
+	            "@gmail.com"
 	          )
 	        )
 	      );
