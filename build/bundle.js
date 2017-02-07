@@ -21757,10 +21757,10 @@
 	            'PROJECTS'
 	          )
 	        ),
-	        _react2.default.createElement(_project2.default, { title: 'Cellular Automata', text: projects.cellularAutomaton, image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca, classProp: 'odd' }),
+	        _react2.default.createElement(_project2.default, { title: 'Cellular Automaton', text: projects.cellularAutomaton, image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca, classProp: 'odd' }),
 	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', text: projects.mindfulMoments, image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm, classProp: 'even' }),
 	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', text: projects.galaxySynth, image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs, classProp: 'odd' }),
-	        _react2.default.createElement(_project2.default, { title: 'Learn:Ukelele', text: projects.learnUkulele, image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu, classProp: 'even' }),
+	        _react2.default.createElement(_project2.default, { title: 'Learn: Ukelele', text: projects.learnUkulele, image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu, classProp: 'even' }),
 	        _react2.default.createElement(_project2.default, { title: 'Alpha Bees', text: projects.alphaBees, image: _ab2.default, url: _urls.urls.ab, classProp: 'odd' })
 	      );
 	    }
@@ -21859,7 +21859,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'project ' + this.props.classProp },
+	        { className: this.props.classProp + ' project' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'box' },
@@ -21954,7 +21954,7 @@
 	'use strict';
 
 	var urls = {
-	  mm: 'https://vast-reef-93477.herokuapp.com/',
+	  mm: 'http://mindfulmoments.life/',
 	  ca: 'https://jdobrowner.github.io/automaton/',
 	  gs: 'https://jdobrowner.github.io/web-synth/',
 	  lu: 'https://jdobrowner.github.io/learn-ukulele/',
@@ -22134,15 +22134,11 @@
 	            'div',
 	            { className: 'box' },
 	            _react2.default.createElement(
-	              'p',
+	              'h3',
 	              { className: 'likes-title' },
-	              _react2.default.createElement(
-	                'span',
-	                null,
-	                'Some Things I Like'
-	              ),
-	              _react2.default.createElement('br', null)
+	              'I\'m a fan of...'
 	            ),
+	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'project' },

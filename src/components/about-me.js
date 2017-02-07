@@ -17,7 +17,7 @@ export default class Projects extends Component {
             <p>{about.intro}</p>
           </div>
           <div className="box">
-            <p className="likes-title"><span>Some Things I Like</span><br/></p>
+            <h3 className="likes-title">I'm a fan of...</h3><br/>
               <div className="project">
                 <div className="box likes">
                   <p>Sci-Fi Literature</p>

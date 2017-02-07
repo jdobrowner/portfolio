@@ -13,6 +13,10 @@
 @grey11: #302f2c;
 @whitesmoke: #f5f5f5;
 
+.padding {
+  padding: 30px;
+}
+
 html {
   background-color: white;
 }
@@ -27,7 +31,8 @@ body {
 }
 
 .content-container {
-  max-width: 1100px;
+  max-width: 1300px;
+  min-width: 320px;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -39,10 +44,10 @@ body {
 }
 
 header {
-  padding: 30px;
+  .padding;
   border: 2px solid @grey5;
   border-right: none;
-
+  border-top: none;
   h1 {
     font-size: 2.1em;
     letter-spacing: 6px;
@@ -61,7 +66,7 @@ header {
 
 .intro {
   font-size: 1.2em;
-  padding: 30px;
+  .padding;
   color: @grey8;
   border-right: 2px solid grey;
   border-bottom: 2px solid grey;
@@ -87,7 +92,7 @@ header {
 .sub-header {
   font-size: 1.4em;
   color: @grey5;
-  padding: 30px;
+  .padding;
   letter-spacing: 6px;
   border-left: 2px solid @grey5;
 }
@@ -113,12 +118,12 @@ header {
 }
 .centered {
   display: flex;
-  justify-content: center;
   align-items: center;
   padding-top: 0;
 }
 img {
   width: 99%;
+  max-width: 460px;
   border: 2px solid @grey4;
 }
 img:hover {
@@ -167,17 +172,16 @@ img:hover {
     font-size: 1.4em;
     padding-bottom: 30px;
     color: @grey5;
+    letter-spacing: 1px;
   }
 }
 
-span {
-  color: @grey7;
-  font-weight: 500;
+.box {
+  .likes-title {
+    padding: 0 0 10px 0;
+  }
 }
 
-.likes-title {
-  padding: 0 0 10px 0;
-}
 .likes {
   padding: 0;
 }
@@ -196,16 +200,29 @@ span {
 }
 
 
-@media (min-width: 796px) {
+@media (min-width: 930px) {
+  .padding {padding: 60px;}
+  header, .intro, .sub-header {.padding;}
+  .contact {padding-bottom: 60px;}
+  .space {height: 120px;}
   header {
     flex-direction: row;
     justify-content: space-between;
   }
-  .centered {
-    justify-content: flex-end;
+  .intro {
+    width: 100%;
+    p {
+      max-width: 600px;
+      text-align: right;
+      margin-left: auto;
+    }
   }
-  .box {
+  .centered {
+    justify-content: flex-start;
+  }
+  .box, .centered {
     width: 50%;
+    .padding;
   }
   .jason {
     h1 {
@@ -219,4 +236,9 @@ span {
     flex-direction: row;
     align-items: flex-start;
   }
+  .even {
+    flex-direction: row-reverse;
+  }
+  .likes-title {padding-left: 60px;}
+  .about .likes {padding: 30px;}
 }

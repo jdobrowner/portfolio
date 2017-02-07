@@ -1,5 +1,5 @@
 const urls = {
-  mm: 'https://vast-reef-93477.herokuapp.com/',
+  mm: 'http://mindfulmoments.life/',
   ca: 'https://jdobrowner.github.io/automaton/',
   gs: 'https://jdobrowner.github.io/web-synth/',
   lu: 'https://jdobrowner.github.io/learn-ukulele/',
