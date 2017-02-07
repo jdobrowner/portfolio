@@ -8,8 +8,9 @@ export default class Projects extends Component {
   render() {
     return (
       <div className="about">
+        <div className="spacer"></div>
         <div className="sub-header">
-          <h3>About Me</h3>
+          <h3>ABOUT ME</h3>
         </div>
         <div className="project">
           <div className="box">

@@ -21760,7 +21760,6 @@
 	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', text: projects.mindfulMoments, image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm }),
 	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', text: projects.galaxySynth, image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs }),
 	        _react2.default.createElement(_project2.default, { title: 'Learn:Ukelele', text: projects.learnUkulele, image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu }),
-	        _react2.default.createElement(_project2.default, { title: 'Logic Quiz', text: projects.logicQuiz, image: _lq2.default, url: _urls.urls.lq, repo: _urls.repos.lq }),
 	        _react2.default.createElement(_project2.default, { title: 'Alpha Bees', text: projects.alphaBees, image: _ab2.default, url: _urls.urls.ab })
 	      );
 	    }

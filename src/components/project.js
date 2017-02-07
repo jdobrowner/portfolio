@@ -24,7 +24,7 @@ export default class Projects extends Component {
   }
   render() {
     return (
-      <div className="project">
+      <div className={`project ${this.props.classProp}`}>
         <div className="box">
           <h3>{this.props.title}</h3>
           <p>{this.props.text.description}</p>

@@ -1,6 +1,5 @@
 @import 'reset.less';
 
-@white: #fafafa;
 @grey1: #dfdfdf;
 @grey2: #c9c9c9;
 @grey3: #b1b1b1;
@@ -12,9 +11,10 @@
 @grey9: #403f3d;
 @grey10: #383734;
 @grey11: #302f2c;
+@whitesmoke: #f5f5f5;
 
 html {
-  background-color: @white;
+  background-color: white;
 }
 
 body {
@@ -28,10 +28,8 @@ body {
 
 .content-container {
   max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .bar {
@@ -41,12 +39,13 @@ body {
 }
 
 header {
-  width: 100%;
-  padding: 140px 30px 100px 30px;
+  padding: 30px;
+  border: 2px solid @grey5;
+  border-right: none;
+
   h1 {
-    font-size: 2.6em;
+    font-size: 2.1em;
     letter-spacing: 6px;
-    text-align: center;
     line-height: 1.5;
   }
 }
@@ -61,51 +60,69 @@ header {
 }
 
 .intro {
-  font-size: 1.1em;
-  text-align: center;
-  padding-bottom: 30px;
-  padding: 0 30px 0 30px;
+  font-size: 1.2em;
+  padding: 30px;
   color: @grey8;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+}
+
+.spacer {
+  width: 100%;
+  height: 100px;
+  border-left: 2px solid @grey5;
 }
 
 .about {
   padding: 0 0 60px 0;
+  .project {
+    border: 2px solid @grey5;
+    border-left: none;
+  }
+  .box .project {
+    border: none;
+  }
 }
 
 .sub-header {
-  text-align: center;
-  padding-top: 60px;
-  padding-bottom: 30px;
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: @grey5;
+  padding: 30px;
+  letter-spacing: 6px;
+  border-left: 2px solid @grey5;
 }
 
 .project {
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+}
+
+.odd {
+  border: 2px solid @grey5;
+  border-left: none;
+
+}
+
+.even {
+  border-left: 2px solid @grey5;
 }
 
 .box {
   width: 100%;
-  padding: 30px;
+  padding: 50px 30px;
 }
 .centered {
   display: flex;
   justify-content: center;
   align-items: center;
-  div {
-    width: 80%;
-  }
+  padding-top: 0;
 }
 img {
-  // margin: auto;
-  width: 100%;
-  // border: 4px solid @white;
-  //transition: 0.1s;
+  width: 99%;
+  border: 2px solid @grey4;
 }
 img:hover {
-  // border: 1px solid @white;
+  // border: 1px solid white;
 }
 
 .button {
@@ -114,17 +131,18 @@ img:hover {
   width: 160px;
   height: 45px;
   line-height: 45px;
-  margin: 30px 30px 0 0;
-  border-radius: 2px;
+  margin: 30px 20px 0 0;
+
 }
 
 .repo {
-  background-color: @white;
+  background-color: white;
   color: @grey3;
   border: 2px solid @grey3;
+  margin-right: 0;
 }
 .goThere {
-  background-color: @white;
+  background-color: white;
   color: @grey4;
   border: 2px solid @grey4;
 }
@@ -136,11 +154,11 @@ img:hover {
 }
 .repo:hover {
   background-color: @grey3;
-  color: @white;
+  color: white;
 }
 .goThere:hover, .border-itunes:hover {
   background-color: @grey4;
-  color: @white;
+  color: white;
 }
 
 
@@ -169,7 +187,8 @@ span {
 }
 .contact {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
+  font-size: 1.4em;
 }
 .tools {
   font-weight: 400;
@@ -198,5 +217,6 @@ span {
   }
   .project {
     flex-direction: row;
+    align-items: flex-start;
   }
 }

@@ -7,7 +7,7 @@ export default class Projects extends Component {
   render() {
     return (
       <div className="contact">
-        <p><span>email: </span><a className="email-me" href="mailto:jdobrowner@gmail.com">jdobrowner@gmail.com</a></p>
+        <p><a className="email-me" href="mailto:jdobrowner@gmail.com"><span>jdobrowner</span>@gmail.com</a></p>
       </div>
     )
   }
