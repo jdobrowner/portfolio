@@ -362,8 +362,15 @@
 /* 5 */
 /***/ function(module, exports) {
 
+	/*
+	object-assign
+	(c) Sindre Sorhus
+	@license MIT
+	*/
+
 	'use strict';
 	/* eslint-disable no-unused-vars */
+	var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 	var hasOwnProperty = Object.prototype.hasOwnProperty;
 	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
@@ -384,7 +391,7 @@
 			// Detect buggy property enumeration order in older V8 versions.
 
 			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-			var test1 = new String('abc');  // eslint-disable-line
+			var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
 			test1[5] = 'de';
 			if (Object.getOwnPropertyNames(test1)[0] === '5') {
 				return false;
@@ -413,7 +420,7 @@
 			}
 
 			return true;
-		} catch (e) {
+		} catch (err) {
 			// We don't expect any of the above to throw, but better to be safe.
 			return false;
 		}
@@ -433,8 +440,8 @@
 				}
 			}
 
-			if (Object.getOwnPropertySymbols) {
-				symbols = Object.getOwnPropertySymbols(from);
+			if (getOwnPropertySymbols) {
+				symbols = getOwnPropertySymbols(from);
 				for (var i = 0; i < symbols.length; i++) {
 					if (propIsEnumerable.call(from, symbols[i])) {
 						to[symbols[i]] = from[symbols[i]];
@@ -21760,7 +21767,7 @@
 	        _react2.default.createElement(_project2.default, { title: 'Cellular Automaton', text: projects.cellularAutomaton, image: _ca2.default, url: _urls.urls.ca, repo: _urls.repos.ca, classProp: 'odd' }),
 	        _react2.default.createElement(_project2.default, { title: 'Mindful Moments', text: projects.mindfulMoments, image: _mm2.default, url: _urls.urls.mm, repo: _urls.repos.mm, classProp: 'even' }),
 	        _react2.default.createElement(_project2.default, { title: 'Galaxy Synth', text: projects.galaxySynth, image: _gs2.default, url: _urls.urls.gs, repo: _urls.repos.gs, classProp: 'odd' }),
-	        _react2.default.createElement(_project2.default, { title: 'Learn: Ukelele', text: projects.learnUkulele, image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu, classProp: 'even' }),
+	        _react2.default.createElement(_project2.default, { title: 'Learn: Ukulele', text: projects.learnUkulele, image: _lu2.default, url: _urls.urls.lu, repo: _urls.repos.lu, classProp: 'even' }),
 	        _react2.default.createElement(_project2.default, { title: 'Alpha Bees', text: projects.alphaBees, image: _ab2.default, url: _urls.urls.ab, classProp: 'odd' })
 	      );
 	    }
@@ -22204,7 +22211,7 @@
 	var introParagraph = 'Hello, I am a web developer based in Los Angeles. I enjoy all aspects of development, from concept, design, frontend, and backend. With a background in music, physics, and architecture, I enjoy bringing together varied perscpecives and skills to build both interesting and useful products. Learn more about me below, and email me if you would like to talk.';
 
 	var aboutMe = {
-	  intro: 'I am a man of many passions, among which are music, physics, mathematics and architecture. But really I am just a guy who likes to have fun, go on adventures, laugh, spend time with the people and animals I love, and eat good food.',
+	  intro: 'I am a man of many passions, among which are music, physics, mathematics and architecture. Before learning web and app development, I was working as a composer for the entertainment industry and a residential home designer.',
 	  likes: 'Sci-Fi Literature, Ancient History, Board Games, Sequoia Trees, Southern Utah, Traveling, and the Lakers',
 	  musicIntro: 'I happen to be a trained orchestral composer and have a very close relationship with the guitar. Some of my music on is featured on SpongeBob SquarePants.',
 	  musicLikes: 'Gustav Holtz - The Planets, Gustav Mahler - 2nd Symphony, Claude Debussy - La Mer',

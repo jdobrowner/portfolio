@@ -24,7 +24,7 @@ export default class Projects extends Component {
         <Project title="Cellular Automaton" text={projects.cellularAutomaton} image={caImg} url={urls.ca} repo={repos.ca} classProp="odd"/>
         <Project title="Mindful Moments" text={projects.mindfulMoments} image={mmImg} url={urls.mm} repo={repos.mm} classProp="even"/>
         <Project title="Galaxy Synth" text={projects.galaxySynth} image={gsImg} url={urls.gs} repo={repos.gs} classProp="odd"/>
-        <Project title="Learn: Ukelele" text={projects.learnUkulele} image={luImg} url={urls.lu} repo={repos.lu} classProp="even"/>
+        <Project title="Learn: Ukulele" text={projects.learnUkulele} image={luImg} url={urls.lu} repo={repos.lu} classProp="even"/>
         <Project title="Alpha Bees" text={projects.alphaBees} image={abImg} url={urls.ab} classProp="odd"/>
       </div>
     )
