@@ -6,21 +6,12 @@ export default class Projects extends Component {
     this.buttons = this.buttons.bind(this);
   }
   buttons() {
-    if (this.props.title !== 'Alpha Bees') {
-      return (
-        <div className="buttons">
-          <a href={this.props.url} target="_blank"><div className="button goThere">Check It Out</div></a>
-          <a href={this.props.repo} target="_blank"><div className="button repo">See The Code</div></a>
-        </div>
-      )
-    }
-    else {
-      return (
-        <div className="buttons">
-          <a href={this.props.url} target="_blank"><div className="button-itunes goThere">See on iTunes Preview</div></a>
-        </div>
-      )
-    }
+    return (
+      <div className="buttons">
+        <a href={this.props.url} target="_blank"><p className="button goThere">Check It Out</p></a>
+        { this.props.repo && <a href={this.props.repo} target="_blank"><p className="button repo">See The Code</p></a> }
+      </div>
+    )
   }
   render() {
     return (

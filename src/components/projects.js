@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import Project from './project';
 import colors from '../colors';
 import { urls, repos } from '../content/urls';
-import mmImg from '../../images/mm.png';
 import caImg from '../../images/ca.png';
 import gsImg from '../../images/gs.png';
 import luImg from '../../images/lu.png';
-import lqImg from '../../images/lq.png';
-import abImg from '../../images/ab.png';
+import kitajImg from '../../images/kitaj.png';
+import mitchImg from '../../images/mitch.png';
 import * as projects from '../content/projects';
 
 export default class Projects extends Component {
@@ -22,10 +21,10 @@ export default class Projects extends Component {
           <h3>PROJECTS</h3>
         </div>
         <Project title="Cellular Automaton" text={projects.cellularAutomaton} image={caImg} url={urls.ca} repo={repos.ca} classProp="odd"/>
-        <Project title="Mindful Moments" text={projects.mindfulMoments} image={mmImg} url={urls.mm} repo={repos.mm} classProp="even"/>
-        <Project title="Galaxy Synth" text={projects.galaxySynth} image={gsImg} url={urls.gs} repo={repos.gs} classProp="odd"/>
-        <Project title="Learn: Ukulele" text={projects.learnUkulele} image={luImg} url={urls.lu} repo={repos.lu} classProp="even"/>
-        <Project title="Alpha Bees" text={projects.alphaBees} image={abImg} url={urls.ab} classProp="odd"/>
+        <Project title="R.B. Kitaj Studio Project" text={projects.kitaj} image={kitajImg} url={urls.kitaj} classProp="even"/>
+        <Project title="Mitch Dobrowner Photography" text={projects.mitch} image={mitchImg} url={urls.mitch} classProp="odd"/>
+        <Project title="Galaxy Synth" text={projects.galaxySynth} image={gsImg} url={urls.gs} repo={repos.gs} classProp="even"/>
+        <Project title="Learn: Ukulele" text={projects.learnUkulele} image={luImg} url={urls.lu} repo={repos.lu} classProp="odd"/>
       </div>
     )
   }

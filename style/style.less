@@ -12,6 +12,11 @@
 @grey10: #383734;
 @grey11: #302f2c;
 @whitesmoke: #f5f5f5;
+@blue0: rgba(0,118,201,0.7);
+@blue1: rgba(0,118,201,0.8);
+@blue2: rgba(0,118,201,0.65);
+@blue3: rgba(0,118,201,0.55);
+@blue4: rgba(0,118,201,0.4);
 
 .padding {
   padding: 30px;
@@ -22,7 +27,8 @@ html {
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   color: @grey8;
   p {
     font-size: 1.05em;
@@ -30,8 +36,17 @@ body {
   }
 }
 
+.quicksand {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.blue {
+  color: @blue0;
+}
+
 .content-container {
-  max-width: 1300px;
+  max-width: 1100px;
   min-width: 320px;
   margin: 0 auto;
   overflow-x: hidden;
@@ -95,6 +110,7 @@ header {
   .padding;
   letter-spacing: 6px;
   border-left: 2px solid @grey5;
+  .quicksand;
 }
 
 .project {
@@ -130,40 +146,43 @@ img:hover {
   // border: 1px solid white;
 }
 
+.buttons {
+  display: flex;
+}
+
 .button {
-  display: inline-block;
+  display: flex;
   text-align: center;
   width: 160px;
   height: 45px;
-  line-height: 45px;
+  align-items: center;
+  justify-content: center;
   margin: 30px 20px 0 0;
 
 }
 
 .repo {
   background-color: white;
-  color: @grey3;
-  border: 2px solid @grey3;
+  color: @blue2;
+  border: 2px solid @blue4;
   margin-right: 0;
 }
 .goThere {
+  .quicksand;
   background-color: white;
-  color: @grey4;
-  border: 2px solid @grey4;
-}
-.button-itunes {
-  .button;
-  .goThere;
-  width: 240px;
-  height: 45px;
+  color: @blue1;
+  border: 2px solid @blue3;
+
 }
 .repo:hover {
-  background-color: @grey3;
+  border: none;
+  background-color: @blue4;
   color: white;
 }
-.goThere:hover, .border-itunes:hover {
-  background-color: @grey4;
+.goThere:hover {
+  background-color: @blue3;
   color: white;
+  border: none;
 }
 
 
@@ -173,6 +192,7 @@ img:hover {
     padding-bottom: 30px;
     color: @grey5;
     letter-spacing: 1px;
+    .quicksand;
   }
 }
 
@@ -187,18 +207,37 @@ img:hover {
 }
 
 .email-me {
-  color: @grey5;
+  // color: @grey5;
+  .blue;
 }
 .contact {
   text-align: center;
-  padding-bottom: 30px;
-  font-size: 1.4em;
+  padding-bottom: 60px;
+  font-size: 1.25em;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+}
+.contact-link, .contact p {
+  color: @blue2;
+}
+.contact-link:hover, .email-me:hover {
+  color: @blue3;
+}
+.pipe {
+  padding: 0 12px;
 }
 .tools {
-  font-weight: 400;
+  // font-weight: 400;
   color: @grey4;
 }
 
+@media (min-width: 540px) {
+  .contact {
+    flex-direction: row;
+  }
+}
 
 @media (min-width: 930px) {
   .padding {padding: 60px;}

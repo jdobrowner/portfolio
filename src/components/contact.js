@@ -7,7 +7,11 @@ export default class Projects extends Component {
   render() {
     return (
       <div className="contact">
-        <p><a className="email-me" href="mailto:jdobrowner@gmail.com"><span>jdobrowner</span>@gmail.com</a></p>
+        <a className="contact-link" href="mailto:jdobrowner@gmail.com"><p>jdobrowner@gmail.com</p></a>
+        <p className="pipe"> | </p>
+        <a className="contact-link" href="https://github.com/jdobrowner"><p>github</p></a>
+        <p className="pipe"> | </p>
+        <a className="contact-link" href="https://www.linkedin.com/in/jasondobrowner/"><p>linkedin</p></a>
       </div>
     )
   }

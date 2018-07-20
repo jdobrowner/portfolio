@@ -21,7 +21,7 @@ export default class Projects extends Component {
               <div className="project">
                 <div className="box likes">
                   <p>Sci-Fi Literature</p>
-                  <p>History</p>
+                  <p>Ancient History</p>
                   <p>Board Games</p>
                 </div>
                 <div className="box likes">

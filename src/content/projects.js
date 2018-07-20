@@ -1,16 +1,21 @@
 const cellularAutomaton = {
-  description: 'An app for generating cellular automata on a triangular grid with user controls.',
-  tools: 'React, Redux, SVG, ES6, Webpack'
+  description: 'Web-based customizable pattern generator based on mathematical rulesets.',
+  tools: 'React, Redux, SVG'
 }
 
-const mindfulMoments = {
-  description: 'An app for creating and storing notes of gratitude.',
-  tools: 'React, Redux, NodeJS, Express, Passport, Bcrypt, JWT, ES6, Webpack'
+const kitaj = {
+  description: 'Official website of the R.B. Kitaj Estate and R.B. Kitaj Studio Project.',
+  tools: 'React, Redux'
+}
+
+const mitch = {
+  description: 'Portfolio site of fine art photographer Mitch Dobrowner.',
+  tools: 'React, Redux, NodeJS'
 }
 
 const galaxySynth = {
   description: 'A web-based polyphonic synthesizer with custom sound controls and midi keyboard plug-in capability.',
-  tools: 'ToneJS, WebMidi, Less, jQuery, ES6, Webpack'
+  tools: 'ToneJS, WebMidi, Less, jQuery'
 }
 
 const learnUkulele = {
@@ -18,21 +23,10 @@ const learnUkulele = {
   tools: 'ToneJS, jQuery, Canvas'
 }
 
-const logicQuiz = {
-  description: 'A simple quiz about the not so simple topic of Boolean Algebra.',
-  tools: 'jQuery, CSS, HTML'
-}
-
-const alphaBees = {
-  description: 'A fast-paced, bee themed word game for both kids and adults on the iOS platform.',
-  tools: 'Objective-C, SpriteKit'
-}
-
 module.exports = {
   cellularAutomaton,
-  mindfulMoments,
   galaxySynth,
   learnUkulele,
-  logicQuiz,
-  alphaBees
+  kitaj,
+  mitch
 }
