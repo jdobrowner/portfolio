@@ -12,7 +12,8 @@
     "build:html": "rm -f build/index.html && cp index.html build/",
     "build:static": "cp -r static/* build/",
     "build": "rm -rf build && mkdir -p build && npm run build:html && npm run build:css && npm run build:static && npm run build:js",
-    "watch:css": "npm run build:css && chokidar-cmd -c 'npm run build:css' -t style/**/*.less"
+    "watch:css": "npm run build:css && chokidar-cmd -c 'npm run build:css' -t style/**/*.less",
+    "deploy": "npm run build && cd build && echo | surge --domain jasondobrowner.com"
   },
   "author": "Jason Dobrowner",
   "license": "ISC",
